@@ -1,0 +1,27 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	LOOP              3001
+//	DO_ADD            300D
+//	DONE              3018
+//	ERR               301D
+//	PUSH              3020
+//	OVERFLOW          302E
+//	DONE_PUSH         302F
+//	POP               3032
+//	UNDERFLOW         303F
+//	DONE_POP          3040
+//	STACK_END         3043
+//	STACK_START       3044
+//	STACK_TOP         3045
+//	PW                3046
+//	SaveR3            3047
+//	SaveR6            3048
+//	SaveR5            3049
+//	NegEq             304A
+//	NegPlus           304B
+//	NegZero           304C
+//	MyStr             304D
+//	ErrStr            3059
+
