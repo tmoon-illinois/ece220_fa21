@@ -9,6 +9,10 @@ typedef struct StudentStuct{
 
 int loadFile(char filename[], student s[]);
 void printStudents(student s[], int num);
+void BubbleSort(student array[], int n);
+void swap(student *a, student *b);
+
+
 int main(){
     student s[100];
     int num;
@@ -19,7 +23,13 @@ int main(){
 
     num = loadFile(filename, s);
     printf("num = %d\n", num);
-    printStudents(s, num);
+    printStudents(s, num);// before sort
+
+    printf("After GPA sort\n");
+    BubbleSort(s, num);
+    printStudents(s, num);// after sort
+
+
 
 }
 int loadFile(char filename[], student s[]){
@@ -47,6 +57,26 @@ void printStudents(student s[], int num){
         printf("%d %s %lf\n", s[i].uin, s[i].netid, s[i].gpa);
 }
 
+void BubbleSort(student array[], int n){
+    int i;
+    int flag_swap;
+    do{
+        flag_swap = 0;
+        for(i = 0; i<n-1 ; i++){
+            if(array[i].gpa < array[i+1].gpa ){
+                swap(&array[i], &array[i+1]);// 
+                flag_swap = 1;
+            }
+        }
+    }while(flag_swap == 1 );
+}
+void swap(student *a, student *b){
+    student temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 
 
