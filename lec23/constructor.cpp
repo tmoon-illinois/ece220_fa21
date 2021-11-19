@@ -21,8 +21,8 @@ class Person{
         }
         void show();
         ~Person(){
-            cout<<"Calling destructor"<<endl;
-            delete name;
+            cout<<"Calling destructor: "<< name << endl;
+            delete []name;
         }
 };
 
